@@ -1,0 +1,37 @@
+@import '../../styles/variables/variables.scss';
+@import '../../styles/mixins/mixins.scss';
+
+.products-list {
+    display: flex;
+    justify-content: space-between;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 340px;
+        background-color: $colorWhite;
+        border-radius: 35px;
+        padding: 20px;
+    }
+    &__item-picture {
+        display: block;
+        margin: 0 auto;
+    }
+    &__item-name {
+        margin-top: 20px;
+        @include body-20;
+    }
+    &__item-btn {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 27px;
+        color: $colorWhite;
+        background-color: $colorBlueBtn;
+        padding: 11px 33px 17px 33px;
+        border-radius: 25px;
+        border: none;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+}

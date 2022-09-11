@@ -4,6 +4,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     color: $colorBlack;
+    background-color: $colorBackground;
 }
 
 h1 {
@@ -34,4 +35,10 @@ p {
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.5rem;   
+}
+
+.wrapper {
+    padding: 0 30px;
+    margin: 0 auto;
+    width: #{"min(100%, 1200px)"};
 }
