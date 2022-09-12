@@ -1,6 +1,12 @@
+import { ReactElement } from 'react';
+import { Product } from '../../pages/Home/types';
 import './style.scss'
 
-function ProductItem({product}) {
+type Props = {
+    product: Product
+}
+
+function ProductItem({ product }: Props): ReactElement {
     return (
         <div className='products-list__item'>
             <div>
@@ -9,9 +15,9 @@ function ProductItem({product}) {
                     width='220px'
                     height='220px'
                     src={product.path}
-                    alt="not found"
+                    alt='not found'
                 />
-                <p 
+                <p
                     className='products-list__item-name'>
                     {product.name}
                 </p>
@@ -22,7 +28,7 @@ function ProductItem({product}) {
                 </p>
                 <button className='products-list__item-btn'>
                     В корзину
-                </button> 
+                </button>
             </div>
         </div>
     );

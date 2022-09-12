@@ -1,4 +1,4 @@
-import { Pagination  } from 'swiper';
+import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Products from '../../components/Header/Products/Products';
 import samsungPhonesImg from '../../assets/img/home/samsungPhonesImg.jpg';
@@ -9,9 +9,11 @@ import '../../assets/img/home/products/airPodsProImg.jpg';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import './style.scss';
+import { Product } from './types';
 
 function Home() {
-    const populaProducts = [
+    const populaProductsHeading: string = 'Популярные товары';
+    const populaProducts: Product[] = [
         {
             path: scooterImg,
             name: 'Электросамокат Kugoo M5',
@@ -34,61 +36,61 @@ function Home() {
             <section className=''>
                 <Swiper
                     className='phones-swiper'
-                    modules={[ Pagination]}
+                    modules={[Pagination]}
                     spaceBetween={30}
                     slidesPerView={1}
                     pagination={{ clickable: true }}>
-                        <SwiperSlide>
-                            <img 
-                                className='phones-swiper__slide-picture'
-                                width='1140px' 
-                                height='765px' 
-                                src={samsungPhonesImg}
-                                alt='not found'/>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img 
-                                className='phones-swiper__slide-picture'
-                                width='1140px' 
-                                height='765px' 
-                                src={samsungPhonesImg}
-                                alt='not found'/>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img 
-                                className='phones-swiper__slide-picture'
-                                width='1140px' 
-                                height='765px' 
-                                src={samsungPhonesImg}
-                                alt='not found'/>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img 
-                                className='phones-swiper__slide-picture'
-                                width='1140px' 
-                                height='765px' 
-                                src={samsungPhonesImg}
-                                alt='not found'/>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img 
-                                className='phones-swiper__slide-picture'
-                                width='1140px' 
-                                height='765px' 
-                                src={samsungPhonesImg}
-                                alt='not found'/>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img 
-                                className='phones-swiper__slide-picture'
-                                width='1140px' 
-                                height='765px' 
-                                src={samsungPhonesImg}
-                                alt='not found'/>
-                        </SwiperSlide>
+                    <SwiperSlide>
+                        <img
+                            className='phones-swiper__slide-picture'
+                            width='1140px'
+                            height='765px'
+                            src={samsungPhonesImg}
+                            alt='not found' />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img
+                            className='phones-swiper__slide-picture'
+                            width='1140px'
+                            height='765px'
+                            src={samsungPhonesImg}
+                            alt='not found' />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img
+                            className='phones-swiper__slide-picture'
+                            width='1140px'
+                            height='765px'
+                            src={samsungPhonesImg}
+                            alt='not found' />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img
+                            className='phones-swiper__slide-picture'
+                            width='1140px'
+                            height='765px'
+                            src={samsungPhonesImg}
+                            alt='not found' />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img
+                            className='phones-swiper__slide-picture'
+                            width='1140px'
+                            height='765px'
+                            src={samsungPhonesImg}
+                            alt='not found' />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img
+                            className='phones-swiper__slide-picture'
+                            width='1140px'
+                            height='765px'
+                            src={samsungPhonesImg}
+                            alt='not found' />
+                    </SwiperSlide>
                 </Swiper>
             </section>
-            <Products heading = 'Популярные товары' products={populaProducts}/>
+            <Products heading={populaProductsHeading} products={populaProducts} />
         </main>
     );
 }

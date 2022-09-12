@@ -4,12 +4,18 @@
 .products-list {
     display: flex;
     justify-content: space-between;
-
+    margin-bottom: 120px;
+    
+    &__heading {
+        text-align: center;
+        margin-bottom: 60px;
+        margin-bottom: 60px;
+    }
     &__item {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        max-width: 340px;
+        width: 29.9%;
         background-color: $colorWhite;
         border-radius: 35px;
         padding: 20px;
@@ -22,13 +28,14 @@
         margin-top: 20px;
         @include body-20;
     }
+    &__item-price {
+        font-weight: 700;
+    }
     &__item-btn {
-        font-weight: 600;
-        font-size: 22px;
-        line-height: 27px;
+        @include body-20;
         color: $colorWhite;
         background-color: $colorBlueBtn;
-        padding: 11px 33px 17px 33px;
+        padding: 15px 32px;
         border-radius: 25px;
         border: none;
         margin-top: 20px;
