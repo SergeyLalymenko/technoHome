@@ -1,18 +1,23 @@
 import { ReactElement } from 'react';
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Products from './Products/Products';
+import ProductCategory from './ProductCategory/ProductCategory';
+import { Product } from './types';
 import samsungPhonesImg from '../../assets/img/home/samsungPhones.jpg';
 import samsungPhoneImg from '../../assets/img/home/products/samsungPhone.jpg';
 import scooterImg from '../../assets/img/home/products/scooter.jpg'
 import airPodsProImg from '../../assets/img/home/products/airPodsPro.jpg';
-import { Product } from './types';
+import appleWatchImg from '../../assets/img/home/products/appleWatch.jpg';
+import acerNitroImg from '../../assets/img/home/products/acerNitro.jpg';
+import redmiBookImg from '../../assets/img/home/products/redmiBook.jpg';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import './style.scss';
+import './Home.scss';
 
 function Home(): ReactElement {
     const populaProductsTitle: string = 'Популярные товары';
+    const discountProductsTitle: string = 'Товары со скидками';
+
     const populaProducts: Product[] = [
         {
             path: scooterImg,
@@ -31,18 +36,36 @@ function Home(): ReactElement {
         }
     ]
 
+    const discountProducts: Product[] = [
+        {
+            path: appleWatchImg,
+            name: 'Смарт-часы Watch Series 6',
+            price: '11 399,00 грн'
+        },
+        {
+            path: acerNitroImg,
+            name: 'Ноутбук ACER Nitro 5',
+            price: '32 999,00 грн'
+        },
+        {
+            path: redmiBookImg,
+            name: 'Ноутбук Xiaomi Mi Redmi Book 14',
+            price: '28 0990,00 грн'
+        }
+    ]
+
     return (
         <main className="home">
             <section className='home__phones-swiper phones-swiper wrapper'>
                 <Swiper
-                    className="phones-swiper"
+                    className="phones-swiper__body"
                     modules={[Pagination]}
                     spaceBetween={30}
                     slidesPerView={1}
                     pagination={{ clickable: true }}>
                     <SwiperSlide>
                         <img
-                            className="phones-swiper__slide-picture"
+                            className="phones-swiper__slide"
                             width="1140"
                             height="765"
                             src={samsungPhonesImg}
@@ -50,7 +73,7 @@ function Home(): ReactElement {
                     </SwiperSlide>
                     <SwiperSlide>
                         <img
-                            className="phones-swiper__slide-picture"
+                            className="phones-swiper__slide"
                             width="1140"
                             height="765"
                             src={samsungPhonesImg}
@@ -58,7 +81,7 @@ function Home(): ReactElement {
                     </SwiperSlide>
                     <SwiperSlide>
                         <img
-                            className="phones-swiper__slide-picture"
+                            className="phones-swiper__slide"
                             width="1140"
                             height="765"
                             src={samsungPhonesImg}
@@ -66,7 +89,7 @@ function Home(): ReactElement {
                     </SwiperSlide>
                     <SwiperSlide>
                         <img
-                            className="phones-swiper__slide-picture"
+                            className="phones-swiper__slide"
                             width="1140"
                             height="765"
                             src={samsungPhonesImg}
@@ -74,7 +97,7 @@ function Home(): ReactElement {
                     </SwiperSlide>
                     <SwiperSlide>
                         <img
-                            className="phones-swiper__slide-picture"
+                            className="phones-swiper__slide"
                             width="1140"
                             height="765"
                             src={samsungPhonesImg}
@@ -82,7 +105,7 @@ function Home(): ReactElement {
                     </SwiperSlide>
                     <SwiperSlide>
                         <img
-                            className="phones-swiper__slide-picture"
+                            className="phones-swiper__slide"
                             width="1140"
                             height="765"
                             src={samsungPhonesImg}
@@ -90,7 +113,10 @@ function Home(): ReactElement {
                     </SwiperSlide>
                 </Swiper>
             </section>
-            <Products title={populaProductsTitle} products={populaProducts} />
+
+            <ProductCategory title={populaProductsTitle} products={populaProducts} />
+
+            <ProductCategory title={discountProductsTitle} products={discountProducts} />
         </main>
     );
 }

@@ -1,4 +1,4 @@
-import { Product } from "../../../pages/Home/types"
+import { Product } from '../types';
 
 export type Props = {
     title: String,

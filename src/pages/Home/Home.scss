@@ -3,18 +3,20 @@
 .swiper-pagination-bullet {
     width: 25px;
     height: 25px;
-    border: 2px solid $colorLoghtYellow;
+    border: 2px solid $colorLightYellow;
     background-color: none;
 
         &-active {
-            background-color: $colorLoghtYellow;
+            background-color: $colorLightYellow;
         }
 }
 
-.phones-swiper {
-   margin: 120px 0px;
+.phones-swiper { 
+    &__body {
+        margin: 120px 0px;
+    }
 
-   &__slide-picture {
+   &__slide {
         width: 100%;
         object-fit: cover;
     }
