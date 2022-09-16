@@ -11,6 +11,7 @@ import appleWatchImg from '../../assets/img/home/products/appleWatch.jpg';
 import acerNitroImg from '../../assets/img/home/products/acerNitro.jpg';
 import redmiBookImg from '../../assets/img/home/products/redmiBook.jpg';
 import 'swiper/css';
+import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './Home.scss';
 
@@ -19,6 +20,21 @@ function Home(): ReactElement {
     const discountProductsTitle: string = 'Товары со скидками';
 
     const populaProducts: Product[] = [
+        {
+            path: scooterImg,
+            name: 'Электросамокат Kugoo M5',
+            price: '27 000,00 грн'
+        },
+        {
+            path: samsungPhoneImg,
+            name: 'Смартфон Samsung Galaxy A13',
+            price: '8 999,00 грн'
+        },
+        {
+            path: airPodsProImg,
+            name: 'Наушники Аpple airpods pro',
+            price: '2799,00 грн'
+        },
         {
             path: scooterImg,
             name: 'Электросамокат Kugoo M5',
@@ -51,6 +67,26 @@ function Home(): ReactElement {
             path: redmiBookImg,
             name: 'Ноутбук Xiaomi Mi Redmi Book 14',
             price: '28 0990,00 грн'
+        },
+        {
+            path: airPodsProImg,
+            name: 'Наушники Аpple airpods pro',
+            price: '2799,00 грн'
+        },
+        {
+            path: scooterImg,
+            name: 'Электросамокат Kugoo M5',
+            price: '27 000,00 грн'
+        },
+        {
+            path: appleWatchImg,
+            name: 'Смарт-часы Watch Series 6',
+            price: '11 399,00 грн'
+        },
+        {
+            path: acerNitroImg,
+            name: 'Ноутбук ACER Nitro 5',
+            price: '32 999,00 грн'
         }
     ]
 
@@ -71,6 +107,7 @@ function Home(): ReactElement {
                             src={samsungPhonesImg}
                             alt="slider" />
                     </SwiperSlide>
+
                     <SwiperSlide>
                         <img
                             className="phones-swiper__slide"
@@ -79,6 +116,7 @@ function Home(): ReactElement {
                             src={samsungPhonesImg}
                             alt="slider" />
                     </SwiperSlide>
+
                     <SwiperSlide>
                         <img
                             className="phones-swiper__slide"
@@ -87,6 +125,7 @@ function Home(): ReactElement {
                             src={samsungPhonesImg}
                             alt="slider" />
                     </SwiperSlide>
+
                     <SwiperSlide>
                         <img
                             className="phones-swiper__slide"
@@ -95,6 +134,7 @@ function Home(): ReactElement {
                             src={samsungPhonesImg}
                             alt="slider" />
                     </SwiperSlide>
+
                     <SwiperSlide>
                         <img
                             className="phones-swiper__slide"
@@ -103,6 +143,7 @@ function Home(): ReactElement {
                             src={samsungPhonesImg}
                             alt="slider" />
                     </SwiperSlide>
+
                     <SwiperSlide>
                         <img
                             className="phones-swiper__slide"
@@ -113,7 +154,6 @@ function Home(): ReactElement {
                     </SwiperSlide>
                 </Swiper>
             </section>
-
             <ProductCategory title={populaProductsTitle} products={populaProducts} />
 
             <ProductCategory title={discountProductsTitle} products={discountProducts} />

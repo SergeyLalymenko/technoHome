@@ -1,23 +1,27 @@
 @import './../../styles/variables/variables.scss';
 
-.swiper-pagination-bullet {
-    width: 25px;
-    height: 25px;
-    border: 2px solid $colorLightYellow;
-    background-color: none;
+.home {
+    .phones-swiper { 
+        &__body {
+            margin: 120px 0px;
 
-        &-active {
-            background-color: $colorLightYellow;
+            .swiper-pagination-bullet {
+                width: 25px;
+                height: 25px;
+                border: 2px solid $colorLightYellow;
+                background-color: none;
+            
+                    &-active {
+                        background-color: $colorLightYellow;
+                    }
+            }
         }
-}
-
-.phones-swiper { 
-    &__body {
-        margin: 120px 0px;
-    }
-
-   &__slide {
-        width: 100%;
-        object-fit: cover;
+    
+        &__slide {
+            width: 100%;
+            object-fit: cover;
+        }
     }
 }
+
+@import './HomeResponsive.scss';
