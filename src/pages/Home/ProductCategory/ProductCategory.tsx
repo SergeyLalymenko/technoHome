@@ -18,14 +18,14 @@ function ProductCategory({ title, products }: Props): ReactElement {
                 <Swiper
                     slidesPerView={1}
                     modules={[Navigation]}
-                    spaceBetween={60}
+                    spaceBetween={45}
                     navigation
                     breakpoints={{
                         991: {
                             slidesPerView: 3
                         },
                         767: {
-                            slidesPerView:2
+                            slidesPerView: 2
                         }
                     }}
                 >
