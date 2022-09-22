@@ -1,7 +1,7 @@
 @import './../../styles/variables/variables.scss';
 
 .home {
-    .phones-swiper { 
+    .phones-swiper {
         &__body {
             margin: 120px 0px;
 
@@ -11,9 +11,9 @@
                 border: 2px solid $colorLightYellow;
                 background-color: none;
             
-                    &-active {
-                        background-color: $colorLightYellow;
-                    }
+                &-active {
+                    background-color: $colorLightYellow;
+                }
             }
         }
     

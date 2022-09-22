@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import { routes } from './enums/routes';
 import Home from './pages/Home/Home';
 import Header from './components/Header/Header';
@@ -11,6 +11,7 @@ function App() {
 
       <Routes>
         <Route path={routes.HOME} element={<Home />} />
+        <Route path="*" element={<Navigate to={routes.HOME} />} />
       </Routes>
     </>
   );
