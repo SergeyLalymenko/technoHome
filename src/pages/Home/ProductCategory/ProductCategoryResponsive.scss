@@ -1,0 +1,23 @@
+@media($mediaXl) {
+    .product-category {
+        &__title {
+            margin-bottom: 40px;
+        }
+
+        &__list {
+            margin-bottom: 90px;
+        }
+    }
+}
+
+@media($mediaMd) {
+    .product-category {
+        &__title {
+            margin-bottom: 30px;
+        }
+
+        &__list {
+            margin-bottom: 60px;
+        }
+    }
+}

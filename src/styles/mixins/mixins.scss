@@ -6,3 +6,14 @@
 @mixin bold {
     font-weight: 700;
 }
+
+@mixin primary-btn {
+    @include body-20;
+
+    color: $colorWhite;
+    background-color: $colorBlue;
+    padding: 15px 40px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}

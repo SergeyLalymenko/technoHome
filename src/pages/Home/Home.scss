@@ -1,0 +1,27 @@
+@import './../../styles/variables/variables.scss';
+
+.home {
+    .phones-swiper { 
+        &__body {
+            margin: 120px 0px;
+
+            .swiper-pagination-bullet {
+                width: 25px;
+                height: 25px;
+                border: 2px solid $colorLightYellow;
+                background-color: none;
+            
+                    &-active {
+                        background-color: $colorLightYellow;
+                    }
+            }
+        }
+    
+        &__slide {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@import './HomeResponsive.scss';
