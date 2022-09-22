@@ -1,0 +1,39 @@
+@import '../../styles/index.scss';
+
+.header {
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 60px 0px #00000026;
+    height: 80px;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        display: flex;
+    }
+
+    &__catalog {
+        display: flex;
+        align-items: center;
+        padding: 6px 10px;
+        border: 1px solid $colorBlack;
+        border-radius: 10px;
+        margin-left: 20px;
+        background: $colorBlue;
+        cursor: pointer;
+        transition: .2s;
+
+        &:hover {
+            opacity: .7;
+        }
+
+        p {
+            @include body-20;
+
+            margin-left: 10px;
+        }
+    }
+}
