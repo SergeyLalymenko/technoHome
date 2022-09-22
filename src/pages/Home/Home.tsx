@@ -92,7 +92,7 @@ function Home(): ReactElement {
 
     return (
         <main className="home">
-            <section className='home__phones-swiper phones-swiper wrapper'>
+            <section className="home__phones-swiper phones-swiper wrapper">
                 <Swiper
                     className="phones-swiper__body"
                     modules={[Pagination]}
@@ -154,6 +154,7 @@ function Home(): ReactElement {
                     </SwiperSlide>
                 </Swiper>
             </section>
+            
             <ProductCategory title={populaProductsTitle} products={populaProducts} />
 
             <ProductCategory title={discountProductsTitle} products={discountProducts} />

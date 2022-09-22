@@ -30,8 +30,8 @@ function ProductCategory({ title, products }: Props): ReactElement {
                     }}
                 >
                     {products.map((product, index) => (
-                        <SwiperSlide>
-                            <ProductCard product={product} key={index} />
+                        <SwiperSlide key={index}>
+                            <ProductCard product={product} />
                         </SwiperSlide>
                     ))}
                 </Swiper>
