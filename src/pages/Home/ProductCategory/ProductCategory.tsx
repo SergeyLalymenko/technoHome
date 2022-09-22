@@ -14,8 +14,8 @@ function ProductCategory({ title, products }: Props): ReactElement {
                 {title}
             </h2>
 
-            <div className="product-category__list">
                 <Swiper
+                    className="product-category__list"
                     slidesPerView={1}
                     modules={[Navigation]}
                     spaceBetween={45}
@@ -29,13 +29,12 @@ function ProductCategory({ title, products }: Props): ReactElement {
                         }
                     }}
                 >
-                    {products.map((product) => (
+                    {products.map((product, index) => (
                         <SwiperSlide>
-                            <ProductCard product={product} />
+                            <ProductCard product={product} key={index} />
                         </SwiperSlide>
                     ))}
                 </Swiper>
-            </div>
         </section>
     );
 }
