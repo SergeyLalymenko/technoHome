@@ -2,10 +2,16 @@
 @import '../../styles/mixins/mixins.scss';
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $colorWhite;
     display: flex;
     align-items: center;
     box-shadow: 0px 4px 60px 0px #00000026;
     height: 80px;
+    z-index: 199;
 
     &__wrapper {
         display: flex;
@@ -19,7 +25,7 @@
     &__catalog {
         display: flex;
         align-items: center;
-        padding: 6px 10px;
+        padding: 5px 10px;
         border: 1px solid $colorBlack;
         border-radius: 10px;
         margin-left: 20px;
@@ -37,4 +43,61 @@
             margin-left: 10px;
         }
     }
+
+    &__search {
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        border: 1px solid $colorBlack;
+        margin-left: auto;
+
+        > img {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        > input {
+            width: 150px;
+            height: 38px;
+            border: none;
+            border-radius: 0 10px 10px 0;
+            padding-right: 10px;
+            background: none;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+    }
+
+    &__avatar {
+        margin-left: 20px;
+        margin-right: 0;
+    }
+
+    &__basket {
+        position: relative;
+        margin-left: 20px;
+        margin-right: 0;
+    }
+
+    &__basket-amount {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: $colorBlue;
+
+        p {
+            font-size: 0.75rem;
+            line-height: 1;
+            color: $colorWhite;
+        }
+    }
 }
+
+@import './HeaderResponsive.scss';

@@ -7,6 +7,16 @@ body {
     background-color: $colorBackground;
 }
 
+input, button, textarea, select {
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
 h1 {
     font-weight: 700;
     font-size: 3.75rem;
@@ -61,6 +71,10 @@ p {
 }
 
 @media($mediaMd) {
+    main {
+        margin-top: 60px;
+    }
+
     h1 {
         font-size: 2.5rem;
         line-height: 3rem;
