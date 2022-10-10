@@ -27,16 +27,11 @@ footer, header, hgroup, menu, nav, section, img {
 ol, ul {
   list-style: none;
 }
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
 }
 
 @import './styles/index.scss';
