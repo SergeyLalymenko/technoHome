@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import ProductCard from '../ProductCard/ProductCard';
+import ProductCard from './ProductCard/ProductCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper';
 import { Props } from './types';
