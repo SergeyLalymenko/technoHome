@@ -1,6 +1,8 @@
 @import '../../../styles/variables/variables.scss';
 
 .product-category {
+    margin-bottom: 120px;
+
     &__title {
         text-align: center;
         margin-bottom: 60px;
@@ -9,7 +11,6 @@
     &__list {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 120px;
     }
 }
 

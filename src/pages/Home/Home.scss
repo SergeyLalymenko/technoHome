@@ -2,9 +2,10 @@
 
 .home {
     .phones-swiper {
-        &__body {
-            margin: 120px 0px;
+        margin-top: 120px;
+        margin-bottom: 120px;
 
+        &__body {
             .swiper-pagination {
                 .swiper-pagination-bullet {
                     width: 25px;

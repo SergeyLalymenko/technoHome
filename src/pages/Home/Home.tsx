@@ -92,67 +92,69 @@ function Home(): ReactElement {
 
     return (
         <main className="home">
-            <section className="home__phones-swiper phones-swiper wrapper">
-                <Swiper
-                    className="phones-swiper__body"
-                    modules={[Pagination]}
-                    spaceBetween={30}
-                    slidesPerView={1}
-                    pagination={{ clickable: true }}>
-                    <SwiperSlide>
-                        <img
-                            className="phones-swiper__slide"
-                            width="1140"
-                            height="765"
-                            src={samsungPhonesImg}
-                            alt="slider" />
-                    </SwiperSlide>
+            <section className="home__phones-swiper phones-swiper">
+                <div className="wrapper">
+                    <Swiper
+                        className="phones-swiper__body"
+                        modules={[Pagination]}
+                        spaceBetween={30}
+                        slidesPerView={1}
+                        pagination={{ clickable: true }}>
+                        <SwiperSlide>
+                            <img
+                                className="phones-swiper__slide"
+                                width="1140"
+                                height="765"
+                                src={samsungPhonesImg}
+                                alt="slider" />
+                        </SwiperSlide>
 
-                    <SwiperSlide>
-                        <img
-                            className="phones-swiper__slide"
-                            width="1140"
-                            height="765"
-                            src={samsungPhonesImg}
-                            alt="slider" />
-                    </SwiperSlide>
+                        <SwiperSlide>
+                            <img
+                                className="phones-swiper__slide"
+                                width="1140"
+                                height="765"
+                                src={samsungPhonesImg}
+                                alt="slider" />
+                        </SwiperSlide>
 
-                    <SwiperSlide>
-                        <img
-                            className="phones-swiper__slide"
-                            width="1140"
-                            height="765"
-                            src={samsungPhonesImg}
-                            alt="slider" />
-                    </SwiperSlide>
+                        <SwiperSlide>
+                            <img
+                                className="phones-swiper__slide"
+                                width="1140"
+                                height="765"
+                                src={samsungPhonesImg}
+                                alt="slider" />
+                        </SwiperSlide>
 
-                    <SwiperSlide>
-                        <img
-                            className="phones-swiper__slide"
-                            width="1140"
-                            height="765"
-                            src={samsungPhonesImg}
-                            alt="slider" />
-                    </SwiperSlide>
+                        <SwiperSlide>
+                            <img
+                                className="phones-swiper__slide"
+                                width="1140"
+                                height="765"
+                                src={samsungPhonesImg}
+                                alt="slider" />
+                        </SwiperSlide>
 
-                    <SwiperSlide>
-                        <img
-                            className="phones-swiper__slide"
-                            width="1140"
-                            height="765"
-                            src={samsungPhonesImg}
-                            alt="slider" />
-                    </SwiperSlide>
+                        <SwiperSlide>
+                            <img
+                                className="phones-swiper__slide"
+                                width="1140"
+                                height="765"
+                                src={samsungPhonesImg}
+                                alt="slider" />
+                        </SwiperSlide>
 
-                    <SwiperSlide>
-                        <img
-                            className="phones-swiper__slide"
-                            width="1140"
-                            height="765"
-                            src={samsungPhonesImg}
-                            alt="slider" />
-                    </SwiperSlide>
-                </Swiper>
+                        <SwiperSlide>
+                            <img
+                                className="phones-swiper__slide"
+                                width="1140"
+                                height="765"
+                                src={samsungPhonesImg}
+                                alt="slider" />
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
             </section>
             
             <ProductCategory title={populaProductsTitle} products={populaProducts} />

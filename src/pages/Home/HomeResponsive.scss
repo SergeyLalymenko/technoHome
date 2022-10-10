@@ -1,9 +1,8 @@
 @media($mediaXl) {
     .home {
         .phones-swiper { 
-            &__body {
-                margin: 90px 0px;
-            }
+            margin-top: 90px;
+            margin-bottom: 90px;
         }
     }
 }
@@ -11,9 +10,10 @@
 @media($mediaMd) {
     .home {
         .phones-swiper { 
-            &__body {
-                margin: 60px 0px;
+            margin-top: 60px;
+            margin-bottom: 60px;
 
+            &__body {
                 .swiper-pagination {
                     bottom: 5px;
 
