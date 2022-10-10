@@ -9,32 +9,34 @@ import './ProductCategory.scss';
 
 function ProductCategory({ title, products }: Props): ReactElement {
     return (
-        <section className="product-category wrapper">
-            <h2 className="product-category__title">
-                {title}
-            </h2>
+        <section className="product-category">
+            <div className="wrapper">
+                <h2 className="product-category__title">
+                    {title}
+                </h2>
 
-            <Swiper
-                className="product-category__list"
-                slidesPerView={1}
-                modules={[Navigation]}
-                spaceBetween={45}
-                navigation
-                breakpoints={{
-                    991: {
-                        slidesPerView: 3
-                    },
-                    767: {
-                        slidesPerView: 2
-                    }
-                }}
-            >
-                {products.map((product, index) => (
-                    <SwiperSlide key={index}>
-                        <ProductCard product={product} />
-                    </SwiperSlide>
-                ))}
-            </Swiper>
+                <Swiper
+                    className="product-category__list"
+                    slidesPerView={1}
+                    modules={[Navigation]}
+                    spaceBetween={45}
+                    navigation
+                    breakpoints={{
+                        991: {
+                            slidesPerView: 3
+                        },
+                        767: {
+                            slidesPerView: 2
+                        }
+                    }}
+                >
+                    {products.map((product, index) => (
+                        <SwiperSlide key={index}>
+                            <ProductCard product={product} />
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
         </section>
     );
 }
