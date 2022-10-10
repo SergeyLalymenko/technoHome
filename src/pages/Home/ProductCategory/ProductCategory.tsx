@@ -10,7 +10,7 @@ import './ProductCategory.scss';
 function ProductCategory({ title, products }: Props): ReactElement {
     return (
         <section className="product-category">
-            <div className="product-category__wrapper wrapper">
+            <div className="wrapper">
                 <h2 className="product-category__title">
                     {title}
                 </h2>
