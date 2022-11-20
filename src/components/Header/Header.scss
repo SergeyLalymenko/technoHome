@@ -45,27 +45,8 @@
     }
 
     &__search {
-        display: flex;
-        align-items: center;
-        border-radius: 10px;
-        border: 1px solid $colorBlack;
         margin-left: auto;
-
-        > img {
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-
-        > input {
-            width: 150px;
-            height: 38px;
-            border: none;
-            border-radius: 0 10px 10px 0;
-            padding-right: 10px;
-            background: none;
-            font-size: 1rem;
-            font-weight: 400;
-        }
+        width: 300px;
     }
 
     &__avatar {
@@ -81,8 +62,8 @@
 
     &__basket-amount {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 4%;
+        right: 4%;
         transform: translate(50%, -50%);
         display: flex;
         align-items: center;
