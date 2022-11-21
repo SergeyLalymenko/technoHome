@@ -10,8 +10,8 @@ function Search({ products }: TSearchProps): ReactElement {
     const [isSearching, setIsSearching] = useState(false);
     const [isMobileSearching, setIsMobileSearching] = useState(false)
 
-    const renderSuggestList = () => {
-        const foundedProducts = products.filter(product => (searchValue && product.name.toLowerCase().includes(searchValue.toLowerCase())));
+    function renderSuggestList() {
+        const foundedProducts = products.filter((product) => (searchValue && product.name.toLowerCase().includes(searchValue.toLowerCase())));
 
         return (
             <ul className="search__suggest-list suggest-list">
@@ -25,14 +25,15 @@ function Search({ products }: TSearchProps): ReactElement {
                     <li className="suggest-list__no-result">
                         Нет результатов
                     </li>
-                    )
+                )
                 }
-            </ul>)
+            </ul>
+        )
     }
 
 
     return (
-        <div className={`search ${isMobileSearching && "search--active"} ${searchValue && isSearching ? 'search--open' : ""}`}>
+        <div className={`search ${isMobileSearching ? "search--active" : ""} ${searchValue && isSearching ? 'search--open' : ""}`}>
             <img
                 src={searchImg}
                 width="20"
@@ -41,9 +42,15 @@ function Search({ products }: TSearchProps): ReactElement {
                 onClick={() => setIsMobileSearching(!isMobileSearching)}
             />
 
-            <input type="text" placeholder="Поиск" onChange={(e) => setSearchValue(e.target.value)} onFocus={() => setIsSearching(true)} onBlur={() => setIsSearching(false)} />
+            <input
+                type="text"
+                placeholder="Поиск"
+                onChange={(e) => setSearchValue(e.target.value)}
+                onFocus={() => setIsSearching(true)}
+                onBlur={() => setIsSearching(false)}
+            />
 
-            {(isSearching && searchValue) && renderSuggestList()}
+            {isSearching && searchValue && renderSuggestList()}
         </div>)
 
 }

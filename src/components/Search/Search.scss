@@ -8,7 +8,7 @@
     border: 1px solid $colorBlack;
 
     &--open {
-        border-bottom: 1px solid transparent;
+        border-bottom: transparent;
         border-radius: 10px 10px 0px 0px;
     }
 
