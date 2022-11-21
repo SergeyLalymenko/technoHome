@@ -6,9 +6,8 @@
     align-items: center;
     border-radius: 10px;
     border: 1px solid $colorBlack;
-    width: auto;
 
-    &--active {
+    &--open {
         border-bottom: 1px solid transparent;
         border-radius: 10px 10px 0px 0px;
     }
@@ -51,11 +50,11 @@
             &:hover {
                 background-color: rgba($colorBlack, .1);
             }
-        }
 
-        >li.suggest-list__no-result {
-            cursor: auto;
-            background-color: transparent;
+            &.suggest-list__no-result {
+                cursor: auto;
+                background-color: transparent;
+            }
         }
         
         a {

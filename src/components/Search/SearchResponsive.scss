@@ -10,17 +10,16 @@
         }
 
         input {
-            width: 0%; 
+            width: 0; 
         }
-    }
 
-    .search--mobile-active {
-            border: 1px solid $colorBlack;
+        &--active {
             background-color: white;
             width: 100%;
     
             input {
                 width: 100%;
             }
+        }
     }
 }

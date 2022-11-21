@@ -1,12 +1,12 @@
 import { ReactElement } from 'react';
 import { Link } from 'react-router-dom';
+import Search from '../Search/Search';
 import { routes } from '../../enums/routes';
 import logoImg from '../../assets/img/header/logo.svg';
 import catalogImg from '../../assets/img/header/catalog.svg';
 import noAvatarImg from '../../assets/img/header/noAvatar.svg';
 import basketImg from '../../assets/img/header/basket.svg';
 import './Header.scss';
-import Search from '../Search/Search';
 
 function Header(): ReactElement {
     const populaProducts = [

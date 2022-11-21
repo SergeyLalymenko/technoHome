@@ -10,46 +10,42 @@ function Search({ products }: TSearchProps): ReactElement {
     const [isSearching, setIsSearching] = useState(false);
     const [isMobileSearching, setIsMobileSearching] = useState(false)
 
-    const isSearchingHandler = () => {
-        setIsSearching(!isSearching);
+    const renderSuggestList = () => {
+        const foundedProducts = products.filter(product => (searchValue && product.name.toLowerCase().includes(searchValue.toLowerCase())));
+
+        return (
+            <ul className="search__suggest-list suggest-list">
+                {foundedProducts.length > 0 ? (foundedProducts.map((product, index) => (
+                    <li key={index}>
+                        <Link to="">
+                            {product.name}
+                        </Link>
+                    </li>
+                ))) : (
+                    <li className="suggest-list__no-result">
+                        Нет результатов
+                    </li>
+                    )
+                }
+            </ul>)
     }
 
-    const onSearch = (value: string) => {
-        setSearchValue(value);
-    }
-
-    const onMobileSearch = () => {
-        setIsMobileSearching(!isMobileSearching);
-    }
-
-    const foundedProducts = products.filter(product => (searchValue && product.name.toLowerCase().includes(searchValue.toLowerCase())));
 
     return (
-        <div className={`search ${isMobileSearching && "search--mobile-active"} ${searchValue && isSearching ? 'search--active' : ""}`}>
+        <div className={`search ${isMobileSearching && "search--active"} ${searchValue && isSearching ? 'search--open' : ""}`}>
             <img
                 src={searchImg}
                 width="20"
                 height="20"
                 alt="search"
-                onClick={onMobileSearch}
+                onClick={() => setIsMobileSearching(!isMobileSearching)}
             />
 
-            <input type="text" placeholder="Поиск" onChange={(e) => onSearch(e.target.value)} onFocus={isSearchingHandler} onBlur={isSearchingHandler} />
-            {(isSearching && searchValue) && (
-                <ul className="search__suggest-list suggest-list">
-                    {foundedProducts.length > 0 ? (foundedProducts.map((product, index) => (
-                        <li key={index}>
-                            <Link to="">
-                                {product.name}
-                            </Link>
-                        </li>
-                    ))) : (<li className="suggest-list__no-result">
-                        Нет результатов
-                    </li>)
-                    }
-                </ul>)}
-        </div>
-    )
+            <input type="text" placeholder="Поиск" onChange={(e) => setSearchValue(e.target.value)} onFocus={() => setIsSearching(true)} onBlur={() => setIsSearching(false)} />
+
+            {(isSearching && searchValue) && renderSuggestList()}
+        </div>)
+
 }
 
 export default Search;
