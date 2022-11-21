@@ -1,0 +1,25 @@
+@import "../../styles/variables/variables.scss";
+
+@media($mediaMd)  {
+    .search {
+        width: 40px;
+        transition: width .2s;
+
+        img {
+            cursor: pointer;
+        }
+
+        input {
+            width: 0; 
+        }
+
+        &--active {
+            background-color: $colorWhite;
+            width: 100%;
+    
+            input {
+                width: 100%;
+            }
+        }
+    }
+}

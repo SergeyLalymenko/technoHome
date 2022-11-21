@@ -5,13 +5,27 @@
         &__catalog {
             margin-left: 10px;
         }
+
+        &__search {
+            position: absolute;
+            z-index: 2;
+            left: 250px;
+            width: calc(100% - 265px); 
+        }
     
         &__avatar {
-            margin-left: 10px;
+            margin-left: auto;
+            width: 30px;
+            height: 30px;
         }
     
         &__basket {
             margin-left: 10px;
+
+            >img {
+                width: 30px;
+                height: 30px;
+            }
         }
     
         &__basket-amount {
@@ -32,27 +46,14 @@
         }
     
         &__search {
-            > img {
-                display: none;
-            }
+            left: 150px;
+            width: calc(100% - 165px); 
     
             > input {
                 width: 100%;
                 max-width: 200px;
                 border-radius: 10px;
                 padding-left: 10px;
-            }
-        }
-
-        &__avatar {
-            width: 30px;
-            height: 30px;
-        }
-
-        &__basket {
-            > img {
-                width: 30px;
-                height: 30px;
             }
         }
     }

@@ -1,13 +1,41 @@
+import { ReactElement } from 'react';
 import { Link } from 'react-router-dom';
+import Search from '../Search/Search';
 import { routes } from '../../enums/routes';
 import logoImg from '../../assets/img/header/logo.svg';
 import catalogImg from '../../assets/img/header/catalog.svg';
-import searchImg from '../../assets/img/header/search.png';
 import noAvatarImg from '../../assets/img/header/noAvatar.svg';
 import basketImg from '../../assets/img/header/basket.svg';
 import './Header.scss';
 
-function Header() {
+function Header(): ReactElement {
+    const populaProducts = [
+        {
+            name: 'Электросамокат Kugoo M5',
+            price: '27 000,00 грн'
+        },
+        {
+            name: 'Смартфон Samsung Galaxy A13',
+            price: '8 999,00 грн'
+        },
+        {
+            name: 'Наушники Аpple airpods pro',
+            price: '2799,00 грн'
+        },
+        {
+            name: 'Электросамокат Kugoo M5',
+            price: '27 000,00 грн'
+        },
+        {
+            name: 'Смартфон Samsung Galaxy A13',
+            price: '8 999,00 грн'
+        },
+        {
+            name: 'Наушники Аpple airpods pro',
+            price: '2799,00 грн'
+        }
+    ]
+
     return (
         <header className="header">
             <div className="header__wrapper wrapper">
@@ -32,13 +60,7 @@ function Header() {
                 </div>
 
                 <div className="header__search">
-                    <img src={searchImg}
-                        width="20"
-                        height="20"
-                        alt="search"
-                    />
-
-                    <input type="text" placeholder="Поиск" />
+                   <Search products={populaProducts}/>
                 </div>
 
                 <img className="header__avatar"
