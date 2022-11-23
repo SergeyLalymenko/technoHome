@@ -17,6 +17,10 @@
             margin-left: auto;
             width: 30px;
             height: 30px;
+
+            >svg {
+                font-size: 20px;
+            }
         }
     
         &__basket {
@@ -40,7 +44,7 @@
             margin-right: 10px;
             padding: 7px;
     
-            p {
+            >p {
                 display: none;
             }
         }

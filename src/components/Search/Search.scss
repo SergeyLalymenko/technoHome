@@ -22,10 +22,11 @@
         font-size: 1rem;
         font-weight: 400;
     }
-    
-    >img {
-        margin-left: 10px;
-        margin-right: 10px;
+
+    >svg {
+        font-size: 20px;
+        padding: 9px;
+        color: $colorGrey;
     }
 
     .suggest-list {
@@ -34,7 +35,7 @@
         overflow: auto;
         position: absolute;
         top: 38px;
-        background-color: $colorWhite;
+        background: $colorWhite;
         border: 1px solid $colorBlack;
         border-top: none;
         margin-left: -1px;
@@ -48,12 +49,12 @@
             cursor: pointer;
             
             &:hover {
-                background-color: rgba($colorBlack, .1);
+                background: rgba($colorBlack, .1);
             }
 
             &.suggest-list__no-result {
                 cursor: auto;
-                background-color: transparent;
+                background: transparent;
             }
         }
         

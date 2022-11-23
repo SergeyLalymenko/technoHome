@@ -5,7 +5,7 @@
         width: 40px;
         transition: width .2s;
 
-        img {
+        >svg {
             cursor: pointer;
         }
 
@@ -14,7 +14,7 @@
         }
 
         &--active {
-            background-color: $colorWhite;
+            background: $colorWhite;
             width: 100%;
     
             input {

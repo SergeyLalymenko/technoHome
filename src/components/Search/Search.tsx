@@ -2,7 +2,8 @@ import { ReactElement, useState } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import { TSearchProps } from './types';
-import searchImg from '../../assets/img/header/search.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import './Search.scss';
 import './SearchResponsive.scss';
 
@@ -40,11 +41,9 @@ function Search({ products }: TSearchProps): ReactElement {
                 { "search--active": isMobileSearching },
                 { "search--open": searchValue && isSearching },
             )}>
-            <img
-                src={searchImg}
-                width="20"
-                height="20"
-                alt="search"
+
+            <FontAwesomeIcon
+                icon={faMagnifyingGlass}
                 onClick={() => setIsMobileSearching(!isMobileSearching)}
             />
 

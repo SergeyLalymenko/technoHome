@@ -23,24 +23,24 @@
     }
 
     &__catalog {
+        @include primary-btn;
+
         display: flex;
         align-items: center;
         padding: 5px 10px;
-        border: 1px solid $colorBlack;
         border-radius: 10px;
         margin-left: 20px;
-        background: $colorBlue;
-        cursor: pointer;
-        transition: .2s;
 
-        &:hover {
-            opacity: .7;
+        >svg {
+            font-size: 24px;
+            color: inherit;
         }
 
-        p {
+        >p {
             @include body-20;
 
             margin-left: 10px;
+            color: inherit;
         }
     }
 
@@ -50,14 +50,28 @@
     }
 
     &__avatar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin-left: 20px;
         margin-right: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid $colorBlack;
+        cursor: pointer;
+
+        >svg {
+            font-size: 24px;
+            color: $colorBlack;
+        }
     }
 
     &__basket {
         position: relative;
         margin-left: 20px;
         margin-right: 0;
+        cursor: pointer;
     }
 
     &__basket-amount {
