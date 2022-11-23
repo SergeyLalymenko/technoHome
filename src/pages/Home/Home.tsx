@@ -106,7 +106,8 @@ function Home(): ReactElement {
                                 width="1140"
                                 height="765"
                                 src={samsungPhonesImg}
-                                alt="slider" />
+                                alt="slider"
+                            />
                         </SwiperSlide>
 
                         <SwiperSlide>
@@ -115,7 +116,8 @@ function Home(): ReactElement {
                                 width="1140"
                                 height="765"
                                 src={samsungPhonesImg}
-                                alt="slider" />
+                                alt="slider"
+                            />
                         </SwiperSlide>
 
                         <SwiperSlide>
@@ -124,7 +126,8 @@ function Home(): ReactElement {
                                 width="1140"
                                 height="765"
                                 src={samsungPhonesImg}
-                                alt="slider" />
+                                alt="slider"
+                            />
                         </SwiperSlide>
 
                         <SwiperSlide>
@@ -133,7 +136,8 @@ function Home(): ReactElement {
                                 width="1140"
                                 height="765"
                                 src={samsungPhonesImg}
-                                alt="slider" />
+                                alt="slider"
+                            />
                         </SwiperSlide>
 
                         <SwiperSlide>
@@ -142,7 +146,8 @@ function Home(): ReactElement {
                                 width="1140"
                                 height="765"
                                 src={samsungPhonesImg}
-                                alt="slider" />
+                                alt="slider"
+                            />
                         </SwiperSlide>
 
                         <SwiperSlide>
@@ -151,7 +156,8 @@ function Home(): ReactElement {
                                 width="1140"
                                 height="765"
                                 src={samsungPhonesImg}
-                                alt="slider" />
+                                alt="slider"
+                            />
                         </SwiperSlide>
                     </Swiper>
                 </div>
