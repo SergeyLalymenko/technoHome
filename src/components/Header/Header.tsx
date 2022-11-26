@@ -1,12 +1,11 @@
 import { ReactElement } from 'react';
 import { Link } from 'react-router-dom';
-import { routes } from '../../enums/routes';
-import Search from '../Search/Search';
+import { routes } from '@enums/routes';
+import Search from '@components/Search/Search';
 import Catalog from './Catalog/Catalog';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserSecret } from '@fortawesome/free-solid-svg-icons';
-import logoImg from '../../assets/img/header/logo.svg';
-// import basketImg from '../../assets/img/header/basket.svg';
+import logoImg from '@assets/img/header/logo.svg';
 import basketImg from '@assets/img/header/basket.svg';
 import './Header.scss';
 
