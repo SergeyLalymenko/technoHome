@@ -2,7 +2,7 @@ import { ReactElement } from 'react';
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import ProductCategory from './ProductCategory/ProductCategory';
-import { Product } from './types';
+import { TProduct } from './types';
 import samsungPhonesImg from '../../assets/img/home/samsungPhones.jpg';
 import samsungPhoneImg from '../../assets/img/home/products/samsungPhone.jpg';
 import scooterImg from '../../assets/img/home/products/scooter.jpg'
@@ -19,7 +19,7 @@ function Home(): ReactElement {
     const populaProductsTitle: string = 'Популярные товары';
     const discountProductsTitle: string = 'Товары со скидками';
 
-    const populaProducts: Product[] = [
+    const populaProducts: TProduct[] = [
         {
             path: scooterImg,
             name: 'Электросамокат Kugoo M5',
@@ -52,7 +52,7 @@ function Home(): ReactElement {
         }
     ]
 
-    const discountProducts: Product[] = [
+    const discountProducts: TProduct[] = [
         {
             path: appleWatchImg,
             name: 'Смарт-часы Watch Series 6',

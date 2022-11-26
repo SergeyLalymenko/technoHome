@@ -22,28 +22,6 @@
         display: flex;
     }
 
-    &__catalog {
-        @include primary-btn;
-
-        display: flex;
-        align-items: center;
-        padding: 5px 10px;
-        border-radius: 10px;
-        margin-left: 20px;
-
-        >svg {
-            font-size: 24px;
-            color: inherit;
-        }
-
-        >p {
-            @include body-20;
-
-            margin-left: 10px;
-            color: inherit;
-        }
-    }
-
     &__search {
         margin-left: auto;
         width: 300px;

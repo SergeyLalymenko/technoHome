@@ -2,8 +2,9 @@ import { ReactElement } from 'react';
 import { Link } from 'react-router-dom';
 import { routes } from '../../enums/routes';
 import Search from '../Search/Search';
+import Catalog from './Catalog/Catalog';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBarsStaggered, faUserSecret } from '@fortawesome/free-solid-svg-icons';
+import { faUserSecret } from '@fortawesome/free-solid-svg-icons';
 import logoImg from '../../assets/img/header/logo.svg';
 import basketImg from '../../assets/img/header/basket.svg';
 import './Header.scss';
@@ -48,13 +49,7 @@ function Header(): ReactElement {
                     />
                 </Link>
 
-                <div className="header__catalog">
-                    <FontAwesomeIcon icon={faBarsStaggered} />
-
-                    <p>
-                        Каталог
-                    </p>
-                </div>
+                <Catalog />
 
                 <div className="header__search">
                    <Search products={popularProducts}/>
