@@ -5,7 +5,6 @@ import { TSearchProps } from './types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import './Search.scss';
-import './SearchResponsive.scss';
 
 function Search({ products }: TSearchProps): ReactElement {
     const [searchValue, setSearchValue] = useState('');
