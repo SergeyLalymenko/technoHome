@@ -6,7 +6,8 @@ import Catalog from './Catalog/Catalog';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserSecret } from '@fortawesome/free-solid-svg-icons';
 import logoImg from '../../assets/img/header/logo.svg';
-import basketImg from '../../assets/img/header/basket.svg';
+// import basketImg from '../../assets/img/header/basket.svg';
+import basketImg from '@assets/img/header/basket.svg';
 import './Header.scss';
 
 function Header(): ReactElement {
