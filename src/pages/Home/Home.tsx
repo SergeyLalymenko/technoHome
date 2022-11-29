@@ -2,14 +2,14 @@ import { ReactElement } from 'react';
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import ProductCategory from './ProductCategory/ProductCategory';
-import { Product } from './types';
-import samsungPhonesImg from '../../assets/img/home/samsungPhones.jpg';
-import samsungPhoneImg from '../../assets/img/home/products/samsungPhone.jpg';
-import scooterImg from '../../assets/img/home/products/scooter.jpg'
-import airPodsProImg from '../../assets/img/home/products/airPodsPro.jpg';
-import appleWatchImg from '../../assets/img/home/products/appleWatch.jpg';
-import acerNitroImg from '../../assets/img/home/products/acerNitro.jpg';
-import redmiBookImg from '../../assets/img/home/products/redmiBook.jpg';
+import { TProduct } from './types';
+import samsungPhonesImg from '@assets/img/home/samsungPhones.jpg';
+import samsungPhoneImg from '@assets/img/home/products/samsungPhone.jpg';
+import scooterImg from '@assets/img/home/products/scooter.jpg';
+import airPodsProImg from '@assets/img/home/products/airPodsPro.jpg';
+import appleWatchImg from '@assets/img/home/products/appleWatch.jpg';
+import acerNitroImg from '@assets/img/home/products/acerNitro.jpg';
+import redmiBookImg from '@assets/img/home/products/redmiBook.jpg';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -19,7 +19,7 @@ function Home(): ReactElement {
     const populaProductsTitle: string = 'Популярные товары';
     const discountProductsTitle: string = 'Товары со скидками';
 
-    const populaProducts: Product[] = [
+    const populaProducts: TProduct[] = [
         {
             path: scooterImg,
             name: 'Электросамокат Kugoo M5',
@@ -52,7 +52,7 @@ function Home(): ReactElement {
         }
     ]
 
-    const discountProducts: Product[] = [
+    const discountProducts: TProduct[] = [
         {
             path: appleWatchImg,
             name: 'Смарт-часы Watch Series 6',
@@ -106,7 +106,8 @@ function Home(): ReactElement {
                                 width="1140"
                                 height="765"
                                 src={samsungPhonesImg}
-                                alt="slider" />
+                                alt="slider"
+                            />
                         </SwiperSlide>
 
                         <SwiperSlide>
@@ -115,7 +116,8 @@ function Home(): ReactElement {
                                 width="1140"
                                 height="765"
                                 src={samsungPhonesImg}
-                                alt="slider" />
+                                alt="slider"
+                            />
                         </SwiperSlide>
 
                         <SwiperSlide>
@@ -124,7 +126,8 @@ function Home(): ReactElement {
                                 width="1140"
                                 height="765"
                                 src={samsungPhonesImg}
-                                alt="slider" />
+                                alt="slider"
+                            />
                         </SwiperSlide>
 
                         <SwiperSlide>
@@ -133,7 +136,8 @@ function Home(): ReactElement {
                                 width="1140"
                                 height="765"
                                 src={samsungPhonesImg}
-                                alt="slider" />
+                                alt="slider"
+                            />
                         </SwiperSlide>
 
                         <SwiperSlide>
@@ -142,7 +146,8 @@ function Home(): ReactElement {
                                 width="1140"
                                 height="765"
                                 src={samsungPhonesImg}
-                                alt="slider" />
+                                alt="slider"
+                            />
                         </SwiperSlide>
 
                         <SwiperSlide>
@@ -151,7 +156,8 @@ function Home(): ReactElement {
                                 width="1140"
                                 height="765"
                                 src={samsungPhonesImg}
-                                alt="slider" />
+                                alt="slider"
+                            />
                         </SwiperSlide>
                     </Swiper>
                 </div>

@@ -1,10 +1,6 @@
 @media($mediaMd) {
     .header {
         height: 60px;
-    
-        &__catalog {
-            margin-left: 10px;
-        }
 
         &__search {
             position: absolute;
@@ -17,6 +13,10 @@
             margin-left: auto;
             width: 30px;
             height: 30px;
+
+            >svg {
+                font-size: 20px;
+            }
         }
     
         &__basket {
@@ -36,15 +36,6 @@
 
 @media($mediaSm) {
     .header {
-        &__catalog {
-            margin-right: 10px;
-            padding: 7px;
-    
-            p {
-                display: none;
-            }
-        }
-    
         &__search {
             left: 150px;
             width: calc(100% - 165px); 

@@ -1,6 +1,6 @@
-import { Product } from '../types';
+import { TProduct } from '../types';
 
 export type Props = {
     title: String,
-    products: Product[]
+    products: TProduct[]
 }

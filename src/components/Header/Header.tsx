@@ -1,15 +1,16 @@
 import { ReactElement } from 'react';
 import { Link } from 'react-router-dom';
-import Search from '../Search/Search';
-import { routes } from '../../enums/routes';
-import logoImg from '../../assets/img/header/logo.svg';
-import catalogImg from '../../assets/img/header/catalog.svg';
-import noAvatarImg from '../../assets/img/header/noAvatar.svg';
-import basketImg from '../../assets/img/header/basket.svg';
+import { routes } from '@enums/routes';
+import Search from '@components/Search/Search';
+import Catalog from './Catalog/Catalog';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserSecret } from '@fortawesome/free-solid-svg-icons';
+import logoImg from '@assets/img/header/logo.svg';
+import basketImg from '@assets/img/header/basket.svg';
 import './Header.scss';
 
 function Header(): ReactElement {
-    const populaProducts = [
+    const popularProducts = [
         {
             name: 'Электросамокат Kugoo M5',
             price: '27 000,00 грн'
@@ -40,35 +41,23 @@ function Header(): ReactElement {
         <header className="header">
             <div className="header__wrapper wrapper">
                 <Link to={routes.HOME} className="header__logo">
-                    <img src={logoImg}
+                    <img
+                        src={logoImg}
                         width="70"
                         height="50"
                         alt="logo"
                     />
                 </Link>
 
-                <div className="header__catalog">
-                    <img src={catalogImg}
-                        width="24"
-                        height="24"
-                        alt="catalog"
-                    />
-
-                    <p>
-                        Каталог
-                    </p>
-                </div>
+                <Catalog />
 
                 <div className="header__search">
-                   <Search products={populaProducts}/>
+                   <Search products={popularProducts}/>
                 </div>
 
-                <img className="header__avatar"
-                    src={noAvatarImg}
-                    width="40"
-                    height="40"
-                    alt="avatar"
-                />
+                <div className="header__avatar">
+                    <FontAwesomeIcon icon={faUserSecret} />
+                </div>
 
                 <div className="header__basket">
                     <img src={basketImg}

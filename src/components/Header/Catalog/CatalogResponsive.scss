@@ -1,0 +1,38 @@
+@media($mediaLg) {
+    .catalog {
+        position: static;
+
+        &__list {
+            top: 90px;
+            left: 10px;
+            width: calc(100% - 20px);
+        }
+    }
+}
+
+@media($mediaMd) {
+    .catalog {
+        margin-left: 10px;
+
+        &__list {
+            top: 70px;
+        }
+    }
+}
+
+
+@media($mediaSm) {
+    .catalog {
+        &__btn {
+            padding: 7px;
+
+            >p {
+                display: none;
+            }
+        }
+
+        &__product {
+            width: 100%;
+        }
+    }
+}

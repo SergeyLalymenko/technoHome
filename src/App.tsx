@@ -1,7 +1,7 @@
 import { Route, Routes, Navigate } from 'react-router-dom';
-import { routes } from './enums/routes';
-import Home from './pages/Home/Home';
-import Header from './components/Header/Header';
+import { routes } from '@enums/routes';
+import Home from '@pages/Home/Home';
+import Header from '@components/Header/Header';
 import './App.scss';
 
 function App() {

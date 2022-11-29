@@ -1,5 +1,5 @@
-export type Product = {
+export type TProduct = {
     path: string,
     name: string,
-    price: string
+    price: string,
 }

@@ -1,5 +1,5 @@
-import { Product } from '../../types';
+import { TProduct } from '../../types';
 
 export type Props = {
-    product: Product
+    product: TProduct
 }
